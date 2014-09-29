@@ -1,0 +1,18 @@
+Mata Kuliah: -exam
+			 -nonExam
+
+Exam:
+	tugas : 10%
+	quiz  : 15%
+	uts	  : 30%
+	uas	  : 30%
+	absen : 15%
+
+kelulusan: nilaiAkhir >= 56 (Lulus)
+
+NonExam:
+	-assignment 1 : 25%
+	-assignment 2 : 25%
+	-finalExam	  : 50%
+	
+kelulusan: tidak ada nilai 0, finalExam>=50, nilaiAkhir >=50
