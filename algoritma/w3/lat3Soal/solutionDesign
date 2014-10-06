@@ -1,0 +1,15 @@
+Angka.java{
+int banyak
+int bilangan[]
+
+constructor :
+ -default : nilai atribut banyak = 10, declare array bilangan;
+ -dgn parameter int size :   penentu nilai atribut banyak
+ 
+ method:
+  -mengecek bilangan dalam array
+  -size array
+  -isi array
+}
+
+testClass.java = main
