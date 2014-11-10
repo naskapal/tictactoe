@@ -1,6 +1,6 @@
 package tictactoe;
 
-import java.util.Scanner;
+import java.util.Scanner;//
 
 public class Tictactoe {
 	static Scanner sc1 = new Scanner(System.in);
