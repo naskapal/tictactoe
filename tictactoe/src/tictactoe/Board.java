@@ -5,6 +5,7 @@ public class Board {
 	private char placement[] = new char [9];
 	private String winner = "";
 	private boolean full,win;
+	private int[][] symmetric = { {0,1,2}, {3,4,5}, {6,7,8}, {0,3,6}, {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};
 	public Board(){
 		for (int i = 0; i < placement.length; i++)
 				placement[i] = '.';
@@ -29,13 +30,14 @@ public class Board {
 		placement[location.getLocation()] = contain;
 		
 	}
-	private boolean check(Location location){
+	private boolean 
+	check(Location location){
 		if (placement[location.getLocation()] != '.' )
 			return false;
 		else
 			return true;
 	}
-
+/*
 	public void checkWin(char player1Piece,char player2Piece){
 		if (placement[0] == player1Piece && placement[1] == player1Piece && placement[2] == player1Piece)
 		{
@@ -118,6 +120,26 @@ public class Board {
 			win = true;
 		}
 	}
+	*/
+	
+	public void checkWin(char player1Piece, char player2Piece){
+		boolean stop = false;
+		for (int i = 0; i < 8; i++){
+			for (int j = 0; j < 3; j++){
+				if (symmetric[i][j] == player1Piece)
+				{
+					win = true;
+					continue;
+				}
+				else
+				{
+					win = false;
+				}
+			}
+		}
+		
+	}
+	
 	public boolean win(){
 		return win;
 	}
@@ -136,5 +158,8 @@ public class Board {
 			}
 			System.out.println();
 		}
+	}
+	public char[] getBoardCondition(){
+		return placement;
 	}
 }

@@ -1,7 +1,7 @@
 package tictactoe;
 
 public class Player {
-	private String name;
+	protected String name;
 	private char pieces;
 	public Player(){
 		name = "";
